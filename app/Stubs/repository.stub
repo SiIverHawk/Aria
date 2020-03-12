@@ -1,0 +1,94 @@
+<?php
+
+namespace App\Repositories\Eloquent;
+
+use Illuminate\Database\Eloquent\Builder;
+
+/**
+ * Class EloquentBaseRepository
+ * 
+ * @package Repositories\Eloquent
+ */
+class EloquentBaseRepository
+{
+  /**
+   * @var Illuminate\Database\Eloquent\Model An instance of the eloquent Model
+   */
+  protected $model;
+
+  /**
+   * @param Model $model
+   */
+  public function __construct($model) 
+  {
+    $this->model = $model;
+  }
+
+  /**
+   * @inheritdoc
+   */
+  public function find($id)
+  {
+    return $this->model->find($id);
+  }
+
+  /**
+   * @inheritdoc
+   */
+  public function all()
+  {
+    return $this->model->orderBy('id', 'DESC')->get();
+  }
+
+  /**
+   * @inheritdoc
+   */
+  public function paginate($perPage = 10)
+  {
+    return $this->model->paginate($perPage);
+  }
+
+  /**
+   * @inheritdoc
+   */
+  public function create($data)
+  {
+    return $this->model->create($data);
+  }
+
+  /**
+   * @inheritdoc
+   */
+  public function update($model, $data)
+  {
+    $model->update($data);
+
+    return $model;
+  }
+
+  /**
+   * @inheritdoc
+   */
+  public function destroy($model)
+  {
+    return $model->delete();
+  }
+
+  /**
+   * @inheritdoc
+   */
+  public function findByMany(array $ids)
+  {
+    $query = $this->model->query();
+
+    return $query->whereIn('id', $ids)->get();
+  }
+
+  /**
+   * @inheritdoc
+   */
+  public function allWithBuilder(): Builder
+  {
+    return $this->model->query();
+  }
+}
