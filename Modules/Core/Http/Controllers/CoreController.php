@@ -8,5 +8,11 @@ use Illuminate\Routing\Controller;
 
 class CoreController extends Controller
 {
-    //TODO code
+    protected $request;
+
+    public function __construct(Request $request)
+    {
+        $this->request = $request;
+    }
+
 }
