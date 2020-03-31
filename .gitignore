@@ -12,4 +12,3 @@ npm-debug.log
 yarn-error.log
 /Modules/*
 !/Modules/Core
-.vscode
