@@ -37196,8 +37196,8 @@ var myChart = new chart_js__WEBPACK_IMPORTED_MODULE_0___default.a(ctx, data);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\HP PC\Documents\Laravel_Projects\semitalk\resources\js\dashboard\charts.js */"./resources/js/dashboard/charts.js");
-module.exports = __webpack_require__(/*! C:\Users\HP PC\Documents\Laravel_Projects\semitalk\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! D:\Workbench\PHP\Laravel\Aria\resources\js\dashboard\charts.js */"./resources/js/dashboard/charts.js");
+module.exports = __webpack_require__(/*! D:\Workbench\PHP\Laravel\Aria\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
