@@ -10,6 +10,10 @@ body {
     padding-top: 52px;
 }
 
+.login-container {
+    padding-top: 3.75rem;
+}
+
 .sidebar {
     position: fixed;
     top: 0;
