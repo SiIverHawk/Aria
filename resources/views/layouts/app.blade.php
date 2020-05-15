@@ -7,19 +7,19 @@
 	<!-- CSRF Token -->
 	<meta name="csrf-token" content="{{ csrf_token() }}">
 	<title>{{ config('app.name', 'Laravel') }}</title>
-	<!-- Scripts -->
-	<script src="{{ asset('js/app.js') }}"></script>
+
 	<!-- Fonts -->
 	<link rel="dns-prefetch" href="//fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 	<!-- Styles -->
 	<link href="{{ asset('css/app.css') }}" rel="stylesheet">
+	<link href="{{ asset('css/dashboard.css') }}" rel="stylesheet">
 </head>
 
 <body>
 	<div id="app">
-		<nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
-			<div class="container">
+		<nav class="navbar navbar-expand-md fixed-top navbar-light flex-md-nowrap p-1 bg-white shadow-sm">
+			<div class="container-fluid">
 				<a class="navbar-brand" href="{{ url('/') }}">
 					{{ config('app.name', 'Laravel') }}
 				</a>
@@ -30,9 +30,9 @@
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<!-- Left Side Of Navbar -->
 					<ul class="navbar-nav mr-auto">
-							<li class="nav-item">
-								<a href="{{ route('users.index')}}" class="nav-link">{{__('Users Module')}}</a> 
-							</li>
+						<li class="nav-item">
+							{{-- <a href="{{ route('users.index')}}" class="nav-link">{{__('Users Module')}}</a> --}}
+						</li>
 					</ul>
 					<!-- Right Side Of Navbar -->
 					<ul class="navbar-nav ml-auto">
@@ -67,9 +67,13 @@
 				</div>
 			</div>
 		</nav>
-		<main class="py-4">
+		<main>
 			@yield('content')
 		</main>
 	</div>
+	<!-- Scripts -->
+	<script src="{{ asset('js/app.js') }}"></script>
+	<script src="{{ asset('js/dashboard.js') }}"></script>
 </body>
+
 </html>
