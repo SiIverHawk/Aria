@@ -13,5 +13,4 @@ const mix = require('laravel-mix');
 
 mix.react('resources/js/app.js', 'public/js')
    .sass('resources/sass/app.scss', 'public/css')
-   .copy('node_modules/@fortawesome/fontawesome-free/webfonts', 'public/webfonts')
    .js(['resources/js/dashboard/charts.js'], 'public/js/dashboard.js');

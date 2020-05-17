@@ -13,4 +13,5 @@ yarn-error.log
 /Modules/*
 !/Modules/Core
 !/Modules/User
+!/Modules/Chat
 .vscode
