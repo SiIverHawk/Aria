@@ -43,3 +43,39 @@ let data = {
 };
 
 let myChart = new Chart(ctx, data);
+
+document
+    .getElementById("btn-toggle")
+    .addEventListener("click", onClickToggleBar);
+
+document
+    .getElementById("sidenav-close-btn")
+    .addEventListener("click", onClickCloseBar);
+
+function onClickToggleBar() {
+    if (
+        document
+            .getElementById("mySidenav")
+            .classList.contains("sidenav-mobile-close")
+    ) {
+        document
+            .getElementById("mySidenav")
+            .classList.remove("sidenav-mobile-close");
+    }
+    document.getElementById("mySidenav").classList.add("sidenav-mobile-open");
+    document.getElementById("dashboard").style.marginLeft = "150px";
+}
+
+function onClickCloseBar() {
+    if (
+        document
+            .getElementById("mySidenav")
+            .classList.contains("sidenav-mobile-open")
+    ) {
+        document
+            .getElementById("mySidenav")
+            .classList.remove("sidenav-mobile-open");
+    }
+    document.getElementById("mySidenav").classList.add("sidenav-mobile-close");
+    document.getElementById("dashboard").style.marginLeft = "0px";
+}

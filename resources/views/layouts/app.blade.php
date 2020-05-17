@@ -13,7 +13,6 @@
 	<link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 	<!-- Styles -->
 	<link href="{{ asset('css/app.css') }}" rel="stylesheet">
-	<link href="{{ mix('css/app.css') }}" rel="stylesheet">
 	<link href="{{ asset('css/dashboard.css') }}" rel="stylesheet">
 </head>
 
@@ -75,6 +74,7 @@
 	<!-- Scripts -->
 	<script src="{{ asset('js/app.js') }}"></script>
 	<script src="{{ asset('js/dashboard.js') }}"></script>
+	<script src="https://kit.fontawesome.com/1df7579eda.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
