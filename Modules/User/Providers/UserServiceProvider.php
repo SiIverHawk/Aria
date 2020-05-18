@@ -4,6 +4,7 @@ namespace Modules\User\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Database\Eloquent\Factory;
+use Illuminate\Support\Facades\Config;
 
 class UserServiceProvider extends ServiceProvider
 {
@@ -42,7 +43,8 @@ class UserServiceProvider extends ServiceProvider
             module_path('User', 'Config/config.php') => config_path('user.php'),
         ], 'config');
         $this->mergeConfigFrom(
-            module_path('User', 'Config/config.php'), 'user'
+            module_path('User', 'Config/config.php'),
+            'user'
         );
     }
 
@@ -59,11 +61,11 @@ class UserServiceProvider extends ServiceProvider
 
         $this->publishes([
             $sourcePath => $viewPath
-        ],'views');
+        ], 'views');
 
         $this->loadViewsFrom(array_merge(array_map(function ($path) {
             return $path . '/modules/user';
-        }, \Config::get('view.paths')), [$sourcePath]), 'user');
+        }, Config::get('view.paths')), [$sourcePath]), 'user');
     }
 
     /**
@@ -89,7 +91,7 @@ class UserServiceProvider extends ServiceProvider
      */
     public function registerFactories()
     {
-        if (! app()->environment('production') && $this->app->runningInConsole()) {
+        if (!app()->environment('production') && $this->app->runningInConsole()) {
             app(Factory::class)->load(module_path('User', 'Database/factories'));
         }
     }
@@ -101,6 +103,8 @@ class UserServiceProvider extends ServiceProvider
      */
     public function provides()
     {
-        return [];
+        return [
+            UserManagementServiceProvider::class,
+        ];
     }
 }
