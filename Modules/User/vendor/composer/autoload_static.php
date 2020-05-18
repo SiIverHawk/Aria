@@ -24,7 +24,12 @@ class ComposerStaticInitd6d935eb1ea2214b0e85f7e8452d80e4
         'Modules\\User\\Database\\Seeders\\UserDatabaseSeeder' => __DIR__ . '/../..' . '/Database/Seeders/UserDatabaseSeeder.php',
         'Modules\\User\\Entities\\User' => __DIR__ . '/../..' . '/Entities/User.php',
         'Modules\\User\\Http\\Controllers\\UserController' => __DIR__ . '/../..' . '/Http/Controllers/UserController.php',
+        'Modules\\User\\Http\\Repositories\\UserRepository\\EloquentUserRepository' => __DIR__ . '/../..' . '/Http/Repositories/UserRepository/EloquentUserRepository.php',
+        'Modules\\User\\Http\\Repositories\\UserRepository\\UserRepositoryInterface' => __DIR__ . '/../..' . '/Http/Repositories/UserRepository/UserRepositoryInterface.php',
+        'Modules\\User\\Http\\Services\\UserManagement\\UserManagement' => __DIR__ . '/../..' . '/Http/Services/UserManagement/UserManagement.php',
+        'Modules\\User\\Http\\Services\\UserManagement\\UserManagementInterface' => __DIR__ . '/../..' . '/Http/Services/UserManagement/UserManagementInterface.php',
         'Modules\\User\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/Providers/RouteServiceProvider.php',
+        'Modules\\User\\Providers\\UserManagementServiceProvider' => __DIR__ . '/../..' . '/Providers/UserManagementServiceProvider.php',
         'Modules\\User\\Providers\\UserServiceProvider' => __DIR__ . '/../..' . '/Providers/UserServiceProvider.php',
     );
 
