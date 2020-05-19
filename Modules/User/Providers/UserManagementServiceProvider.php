@@ -2,6 +2,7 @@
 
 namespace Modules\User\Providers;
 
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\ServiceProvider;
 use Modules\User\Entities\User;
 use Modules\User\Http\Repositories\UserRepository\EloquentUserRepository;
@@ -35,7 +36,8 @@ class UserManagementServiceProvider extends ServiceProvider
     {
         $this->app->bind(UserManagementInterface::class, function () {
             return new UserManagement(
-                $this->app->make(UserRepositoryInterface::class)
+                $this->app->make(UserRepositoryInterface::class),
+                new DB
             );
         });
     }

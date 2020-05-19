@@ -13,6 +13,17 @@ interface CoreRepositoryInterface
     public function find($id);
 
     /**
+     * Return a collection of records by a field, data and ordering
+     *
+     * @param string|integer|boolean $data
+     * @param string $field
+     * @param string $order
+     * @param string $orderField
+     * @return void
+     */
+    public function whereIn($data, $order = null, $orderField = null);
+
+    /**
      * Return a collection of all elements of the resource
      * @return \Illuminate\Database\Eloquent\Collection
      */

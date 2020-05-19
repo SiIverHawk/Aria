@@ -31,6 +31,17 @@ abstract class EloquentCoreRepository implements CoreRepositoryInterface
     /**
      * @inheritdoc
      */
+    public function whereIn($data, $order = 'DESC', $orderField = 'id')
+    {
+        foreach ($data as $column => $value) 
+        {
+            return $this->model->whereIn($column, $value)->orderBy($order, $orderField)->get();
+        }
+    }
+
+    /**
+     * @inheritdoc
+     */
     public function all()
     {
         return $this->model->orderBy('id', 'DESC')->get();

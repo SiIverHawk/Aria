@@ -1,18 +1,21 @@
-$(document).ready(function() {
-    $(".btn-request").click(function() {
+import React from "react";
+import ReactDOM from "react-dom";
 
-        $.ajaxSetup({
-            headers: {
-                'X-CSRF-TOKEN': $('meta[name="csrf-token"]')
-            }
-        })
+function App() {
+    return (
+        <div className="container-fluid">
+            <div className="row justify-content-center">
+                <div className="col-md-8">
+                    <div className="card">
+                        <div className="card-header">User Dashboard</div>
+                        <div className="card-body">User management</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+}
 
-        $.ajax({
-            url: `${window.location.href}/all-users`,
-            type: 'GET',
-            success: function (data) {
-                console.log(data);                
-            }
-        });
-    });
-});
+export default App;
+
+ReactDOM.render(<App />, document.getElementById("user-app"));

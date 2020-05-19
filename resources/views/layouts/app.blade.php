@@ -7,13 +7,16 @@
 	<!-- CSRF Token -->
 	<meta name="csrf-token" content="{{ csrf_token() }}">
 	<title>{{ config('app.name', 'Laravel') }}</title>
-
+	<!-- Scripts -->
+	<script src="https://kit.fontawesome.com/1df7579eda.js" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 	<!-- Fonts -->
 	<link rel="dns-prefetch" href="//fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 	<!-- Styles -->
 	<link href="{{ asset('css/app.css') }}" rel="stylesheet">
 	<link href="{{ asset('css/dashboard.css') }}" rel="stylesheet">
+	
 </head>
 
 <body>
@@ -71,10 +74,7 @@
 			@yield('content')
 		</main>
 	</div>
-	<!-- Scripts -->
-	<script src="{{ asset('js/app.js') }}"></script>
-	<script src="{{ asset('js/dashboard.js') }}"></script>
-	<script src="https://kit.fontawesome.com/1df7579eda.js" crossorigin="anonymous"></script>
+	@yield('javascript')
 </body>
 
 </html>

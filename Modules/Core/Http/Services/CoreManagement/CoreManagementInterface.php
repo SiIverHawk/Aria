@@ -25,7 +25,15 @@ interface CoreManagementInterface
    * 
    * @return \Illuminate\Http\JsonResponse
    */
-  public function create(Array $input);
+  public function create();
+
+    /**
+   * Creates a record to the bound entity
+   *@param Array $input
+   * 
+   * @return \Illuminate\Http\JsonResponse
+   */
+  public function store(Array $input);
 
     /**
    * Updates a record to the bound entity
