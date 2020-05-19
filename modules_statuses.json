@@ -2,5 +2,6 @@
     "User": true,
     "Message": true,
     "Core": true,
-    "Chat": true
+    "Chat": true,
+    "TestingReact": true
 }

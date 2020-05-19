@@ -8,10 +8,10 @@
 	<meta name="csrf-token" content="{{ csrf_token() }}">
 	<title>{{ config('app.name', 'Laravel') }}</title>
 	<!-- Scripts -->
-	<script src="https://code.jquery.com/jquery-3.5.1.min.js"
-		integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js@2/dist/Chart.min.js"></script>
 	<script src="https://kit.fontawesome.com/1df7579eda.js" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+	
 	<!-- Fonts -->
 	<link rel="dns-prefetch" href="//fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
